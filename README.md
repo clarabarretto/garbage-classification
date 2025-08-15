@@ -1,6 +1,6 @@
 # Garbage Classification
 
-Classificador de imagens de lixo utilizando transfer learning e um ensemble dos modelos MobileNetV2 e ResNet50.
+Classificador de imagens de lixo utilizando transfer learning e um ensemble dos modelos MobileNetV2, ResNet50 e EfficientNetB0.
 
 ## Pré-requisitos
 - Python 3.8+
@@ -18,6 +18,7 @@ O notebook utiliza `kagglehub` para baixar automaticamente o conjunto de dados. 
 
 ## Características
 - Data augmentation para aumentar a diversidade dos dados
-- Ensemble entre MobileNetV2 e ResNet50
-- Fine-tuning com descongelamento parcial das redes base
+- Ensemble entre MobileNetV2, ResNet50 e EfficientNetB0
+- Métrica adicional de `top-3 accuracy` durante o treinamento
+- Fine-tuning suave com descongelamento das últimas 20 camadas de cada modelo base e taxa de aprendizado reduzida
 - Pesos de classe para lidar com desbalanceamento
